@@ -76,11 +76,17 @@ Resolves: #123
 
 ```
 src/
-├── app/          # Next.js 13+ App Router
-├── components/   # 재사용 가능한 컴포넌트
-├── store/        # Zustand 스토어
-├── styles/       # 전역 스타일
-└── types/        # TypeScript 타입 정의
+├── app/
+├── components/
+├── store/
+├── styles/
+├── types/
+├── hooks/
+├── utils/
+├── assets/
+├── pages/
+└── router/
+
 ```
 
 ## 🤝 기여하기
