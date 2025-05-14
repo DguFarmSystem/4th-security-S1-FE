@@ -4,7 +4,9 @@ type Props = {
 export default function DivContainer({ children }: Props) {
   return (
     <>
-      <div className="bg-red-500">{children}</div>
+      <div className="flex items-center justify-center w-1/3 bg-zinc-100 pb-[90vh] ml-[33vw]">
+        {children}
+      </div>
     </>
   );
 }
