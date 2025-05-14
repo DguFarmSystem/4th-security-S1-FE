@@ -1,12 +1,20 @@
 import { createBrowserRouter } from "react-router-dom";
 import React from "react";
-
-// 예시 컴포넌트
-const Home = () => <div>홈</div>;
+import Auth from "../pages/Auth";
+import MainPage from "../pages/MainPage";
+import Mypage from "../pages/Mypage";
 
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: <Auth />,
+  },
+  {
+    path: "/main",
+    element: <MainPage />,
+  },
+  {
+    path: "/mypage",
+    element: <Mypage />,
   },
 ]);
