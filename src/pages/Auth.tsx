@@ -1,16 +1,18 @@
 import React, { useState } from 'react';
 import Switch from '../components/Switch';
 import donggukLogo from '../assets/dongguklogo.png'; // 로고 이미지 import
+import { useNavigate } from 'react-router-dom';
 
 const AuthPage: React.FC = () => {
   const [isLoginView, setIsLoginView] = useState(true);
 
   // Input field states
-  const [email, setEmail] = useState('@dgu.ac.kr');
+  const [email, setEmail] = useState('');
   const [studentId, setStudentId] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [isAdmin, setIsAdmin] = useState(false);
+  const navigate = useNavigate();
 
   const handleAdminToggle = () => setIsAdmin(!isAdmin);
 
@@ -18,6 +20,7 @@ const AuthPage: React.FC = () => {
     e.preventDefault();
     // TODO: Implement login logic
     console.log('Login submitted', { email, studentId, password, isAdmin });
+    navigate('/main');
   };
 
   const handleRegisterSubmit = (e: React.FormEvent) => {
@@ -51,13 +54,18 @@ const AuthPage: React.FC = () => {
             <div className="mb-4">
               <label htmlFor="loginEmail" className="block mb-1 text-gray-600">이메일</label>
               <input
-                type="email"
+                type="text"
                 id="loginEmail"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="이메일"
                 required
-                className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-orange-400 focus:border-transparent outline-none" />
+                className="w-3/4 p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-orange-400 focus:border-transparent outline-none" />
+              <span 
+                className="text-gray-500 text-sm border border-gray-300 rounded-md p-2 bg-gray-100 w-3/4 "
+              >
+                @dgu.ac.kr
+              </span>
             </div>
 
             <div className="mb-4">
@@ -85,6 +93,7 @@ const AuthPage: React.FC = () => {
             </div>
 
             <button 
+              onClick={handleLoginSubmit}
               type="submit" 
               className="w-full py-3 bg-[#f8901f] text-white rounded-full font-semibold text-lg hover:bg-orange-600 transition-colors duration-200">
               로그인
@@ -132,7 +141,12 @@ const AuthPage: React.FC = () => {
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="학교 이메일을 입력해주세요"
                 required
-                className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-orange-400 focus:border-transparent outline-none" />
+                className="w-3/4 p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-orange-400 focus:border-transparent outline-none" />
+              <span 
+                className="text-gray-500 text-sm border border-gray-300 rounded-md p-2 bg-gray-100 w-3/4 "
+              >
+                @dgu.ac.kr
+              </span>
             </div>
 
             <div className="mb-4">
