@@ -1,15 +1,13 @@
 # Farm System
 
-농장 관리 시스템 프로젝트입니다.
+보안/웹 S1팀 레포지토리입니다.
 
 ## 🚀 기술 스택
 
-- Next.js
+- React
 - TypeScript
 - Tailwind CSS
 - Zustand (상태 관리)
-- ESLint
-- Prettier
 
 ## 📦 설치 및 실행
 
@@ -78,11 +76,17 @@ Resolves: #123
 
 ```
 src/
-├── app/          # Next.js 13+ App Router
-├── components/   # 재사용 가능한 컴포넌트
-├── store/        # Zustand 스토어
-├── styles/       # 전역 스타일
-└── types/        # TypeScript 타입 정의
+├── app/
+├── components/
+├── store/
+├── styles/
+├── types/
+├── hooks/
+├── utils/
+├── assets/
+├── pages/
+└── router/
+
 ```
 
 ## 🤝 기여하기
