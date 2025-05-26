@@ -1,8 +1,8 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState } from 'react';
 import Switch from '../components/Switch';
 import donggukLogo from '../assets/dongguklogo.png'; // 로고 이미지 import
 import { useNavigate } from 'react-router-dom';
-import { toast, ToastContainer } from 'react-toastify'; // 알림을 위한 라이브러리
+import { toast } from 'react-toastify'; // 알림을 위한 라이브러리
 import 'react-toastify/dist/ReactToastify.css';
 
 // 이메일 유효성 검사를 위한 정규식
